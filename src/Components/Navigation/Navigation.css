@@ -1,0 +1,209 @@
+.NavArea {
+  position: fixed;
+  min-height: 79px;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 1% 1rem;
+  z-index: 99;
+}
+
+.NavBarChange {
+  background-color: white;
+  min-height: 60px;
+  max-width: 1760px;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  font-size: 1.3rem;
+  transition: 400ms;
+}
+
+.NavBar {
+  background-color: transparent;
+  min-height: 50px;
+  max-width: 1760px;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  font-size: 1.3rem;
+  transition: 400ms;
+}
+
+.Logo {
+  z-index: 99;
+}
+
+.Logo h2 {
+  margin: auto;
+  opacity: 0.8;
+  font-weight: 800;
+}
+.Menubar {
+  display: flex;
+  align-items: center;
+}
+
+.Menubar ul {
+  display: flex;
+  margin: auto;
+}
+
+.Menubar ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.Menubar ul li a {
+  margin: 20px 30px;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  opacity: 0.8;
+  font-size: 1.5rem;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+.Menubar .ButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.YellowButton {
+  position: relative;
+  min-width: 220px;
+  min-height: 60px;
+  padding: 0.4em 1.7em;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.5rem;
+  background-color: rgb(214, 214, 111);
+  border: 2px solid rgb(214, 214, 111);
+  cursor: pointer;
+}
+.MenuIcon {
+  width: 50px;
+  height: 50px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
+  z-index: 999;
+  position: relative;
+}
+.MenuIcon span {
+  background-color: rgb(89, 90, 90);
+  display: flex;
+  height: 3px;
+  width: 40px;
+}
+.YellowButton:hover {
+  background-color: rgb(36, 35, 35);
+  color: white;
+  border: 2px solid rgb(236, 231, 159);
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+.Menubar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: black;
+  transition: 300ms;
+}
+
+.Menubar ul li a {
+  overflow: hidden;
+}
+
+.Menubar ul li a::after {
+  opacity: 0.4;
+  transform: translate3d(-101%, 0, 0);
+}
+
+.Menubar ul li a:hover::after,
+.Menubar ul li a:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 1000px) {
+  .MenuIcon {
+    display: flex;
+  }
+
+  .Menubar {
+    display: none;
+  }
+
+  .Menubar {
+    position: absolute;
+  }
+
+  #MenuToggle:checked ~ .Menubar {
+    background-color: white;
+    height: 120vh;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding-top: 100px;
+    line-height: 40px;
+    transition: 400ms;
+    visibility: visible;
+  }
+
+  #MenuToggle:checked ~ .Menubar .ButtonContainer {
+    margin-left: 80px;
+    margin-top: 50px;
+    /* width: 100%; */
+  }
+
+  #MenuToggle:checked ~ .Menubar ul {
+    display: flex;
+    flex-direction: column;
+    opacity: 0.4;
+    margin: 0;
+    line-height: 20px;
+  }
+  #MenuToggle:checked ~ .Menubar ul li a {
+    font-size: 2.5rem;
+    line-height: 30px;
+  }
+
+  #MenuToggle:checked ~ .Menubar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #MenuToggle:checked ~ .MenuButton div span:nth-child(1) {
+    background-color: rgb(89, 90, 90);
+    transform: rotate(45deg);
+    transition: 500ms;
+  }
+  #MenuToggle:checked ~ .MenuButton div span:nth-child(2) {
+    visibility: hidden;
+  }
+  #MenuToggle:checked ~ .MenuButton div span:nth-child(3) {
+    background-color: rgb(89, 90, 90);
+    position: absolute;
+    top: 15px;
+    transform: rotate(-45deg);
+    transition: 500ms;
+  }
+}

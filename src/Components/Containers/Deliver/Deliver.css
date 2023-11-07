@@ -1,0 +1,29 @@
+.DeliverContainer {
+  margin: auto;
+  max-width: 1800px;
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.DeliverContainer .DeliverArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.DeliverContainer h2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 70px;
+  margin-bottom: auto;
+}
+
+.DeliverContainer img {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  margin-top: 20px;
+}

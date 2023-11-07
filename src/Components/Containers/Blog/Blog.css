@@ -1,0 +1,54 @@
+.BlogContainer {
+  max-width: 1800px;
+  width: 100vw;
+  margin: auto;
+}
+
+.BlogContainer h1 {
+  opacity: 0.5;
+  font-size: 50px;
+  margin: 40px 120px;
+  text-align: start;
+}
+
+.Blog {
+  height: 450px;
+  width: 350px;
+  margin: 10px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Blog h2 {
+  margin-left: 10px;
+}
+
+.Blog img {
+  border-radius: 20px 20px 0 0;
+  height: 200px;
+  width: 100%;
+}
+
+.Blog .BlogUser {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.Blog .BlogUser img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.BlogArea {
+  max-width: 1800px;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

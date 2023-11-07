@@ -1,0 +1,57 @@
+.ValueContainer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  background-color: black;
+  color: rgb(214, 214, 111);
+  display: flex;
+  justify-content: center;
+}
+
+.ValueArea {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 5rem;
+  justify-content: left;
+  margin: 0 10%;
+}
+
+.ValueContainer p:first-child {
+  opacity: 0.5;
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.ValueContainer p:nth-child(2) {
+  font-size: 3.5rem;
+  padding-top: 10px;
+  margin: auto;
+}
+
+.ValueContainer p:nth-child(3) {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.ValueImage {
+  width: 40%;
+}
+
+.ValueImage img {
+  width: 100%;
+}
+
+.ValuePara {
+  max-width: 50%;
+  width: 35%;
+}
+
+.ValueContainer img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.ValueContainer .YellowButton {
+  min-height: 70px;
+}

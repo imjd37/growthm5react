@@ -1,0 +1,39 @@
+.OurTeamContainer {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(236, 231, 159);
+}
+
+.OurTeamArea {
+  display: flex;
+  width: 98vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.OurTeamArea .OurTeam {
+  margin: 15px;
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 50px;
+  color: rgb(236, 231, 159);
+}
+
+.OurTeamArea .OurTeam p {
+  font-size: 2rem;
+  margin: auto;
+}
+
+.OurTeamArea .OurTeam img {
+  width: 100%;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.OurTeamArea .OurTeam h2 {
+  margin: auto;
+}

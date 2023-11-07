@@ -1,0 +1,15 @@
+.Start {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  visibility: show;
+  z-index: 99;
+}
+
+.StartHidden {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  visibility: hidden;
+  z-index: 99;
+}
