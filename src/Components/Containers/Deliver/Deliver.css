@@ -27,3 +27,24 @@
   border-radius: 20px;
   margin-top: 20px;
 }
+
+@media (max-width: 767px) {
+  .DeliverContainer .DeliverArea {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .DeliverContainer h2 {
+    font-size: 3rem;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 575px) {
+  .DeliverContainer img {
+    height: auto;
+    width: 90vw;
+  }
+  .DeliverContainer h2 {
+    font-size: 2.5rem;
+  }
+}

@@ -20,6 +20,9 @@ function Navigation() {
         <div className="Logo">
           <h2>GrowthM5</h2>
         </div>
+        <button className="MenuIcon">
+          <img src="./imgs/lines.png" alt="menuButton"></img>
+           </button>
         <div className="Menubar">
           <ul>
             <li>

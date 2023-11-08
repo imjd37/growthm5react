@@ -30,3 +30,21 @@
   min-height: 70px;
   min-width: 70px;
 }
+
+@media (max-width: 1000px) {
+  .EnquiryContainer {
+    font-size: 1.5rem;
+  }
+
+  .EnquiryContainer form input {
+    width: 80vw;
+    font-size: 1.5rem;
+    height: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .EnquiryContainer form .YellowButton {
+    width: 100%;
+  }
+}

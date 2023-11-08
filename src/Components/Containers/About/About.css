@@ -32,3 +32,26 @@
   color: white;
   margin-top: auto;
 }
+
+@media (max-width: 1000px) {
+  .AboutArea {
+    line-height: 60px;
+    width: 98%;
+  }
+
+  .AboutArea p {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .AboutArea p {
+    font-size: 10vw;
+    line-height: 12vw;
+  }
+}
+@media (max-width: 575px) {
+  .AboutArea button {
+    min-height: 65px;
+  }
+}

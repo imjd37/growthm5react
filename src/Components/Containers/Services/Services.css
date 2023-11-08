@@ -41,3 +41,13 @@
   width: 100%;
   border-radius: 35%;
 }
+
+@media (max-width: 767px) {
+  .ServiceContainer {
+    flex-wrap: wrap;
+  }
+
+  .ServiceContainer .ServiceSection:nth-child(2) {
+    margin-top: 0;
+  }
+}

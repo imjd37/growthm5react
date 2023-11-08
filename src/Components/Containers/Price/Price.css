@@ -16,3 +16,15 @@
   width: 800px;
   margin-bottom: 4rem;
 }
+
+@media (max-width: 1000px) {
+  .PriceContainer img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .PriceContainer {
+    font-size: 4.5vw;
+  }
+}

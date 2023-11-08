@@ -60,3 +60,60 @@
 .ContactUsArea:hover {
   background-size: 160%;
 }
+
+@media (max-width: 1000px) {
+  .ContactUsContainer p {
+    font-size: 6vw;
+    line-height: 9vh;
+  }
+  .ContactUsArea {
+    background-size: 120%;
+  }
+  .ContactUsArea:hover {
+    background-size: 150%;
+  }
+}
+
+@media (max-width: 767px) {
+  .ContactUsContainer {
+    width: 90%;
+  }
+
+  .ContactUsContainer p {
+    font-size: 7.5vw;
+    line-height: 9vh;
+    text-align: center;
+  }
+
+  .ContactUsArea {
+    background-size: 140%;
+  }
+  .ContactUsArea:hover {
+    background-size: 160%;
+  }
+}
+@media (max-width: 575px) {
+  .ContactUsArea {
+    background-size: 220%;
+    position: relative;
+    height: 90%;
+  }
+
+  .ContactUsArea:hover {
+    background-size: 250%;
+    position: relative;
+    height: 90%;
+  }
+
+  .ContactUsArea {
+    border-radius: 40px;
+  }
+  .ContactUsContainer p {
+    font-size: 2.4rem;
+    line-height: 40px;
+  }
+
+  .ContactUsContainer .YellowButton {
+    width: 90%;
+  }
+}

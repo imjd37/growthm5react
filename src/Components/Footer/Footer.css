@@ -6,3 +6,9 @@ footer {
   font-size: 2rem;
   padding: 20px 0;
 }
+
+@media (max-width: 767px) {
+  footer {
+    font-size: 4vw;
+  }
+}

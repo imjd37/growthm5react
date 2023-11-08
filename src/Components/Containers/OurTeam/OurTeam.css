@@ -37,3 +37,15 @@
 .OurTeamArea .OurTeam h2 {
   margin: auto;
 }
+
+@media (max-width: 1000px) {
+  .OurTeamArea {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .OurTeamContainer {
+    font-size: 5vw;
+  }
+}

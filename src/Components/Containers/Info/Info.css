@@ -51,3 +51,35 @@
   margin-top: -140px;
   visibility: hidden;
 }
+
+@media (max-width: 1000px) {
+  .InfoArea .InfoContant p {
+    margin: auto;
+  }
+
+  .InfoArea .InfoImage img {
+    height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .InfoArea .InfoContant h1 {
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .InfoArea {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .InfoArea .InfoContant {
+    width: 98vw;
+    font-size: 0.7rem;
+  }
+  .InfoArea .InfoImage {
+    width: 98vw;
+    height: auto;
+  }
+}

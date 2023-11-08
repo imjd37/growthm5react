@@ -24,7 +24,7 @@
 
 .NavBar {
   background-color: transparent;
-  min-height: 50px;
+  min-height: 60px;
   max-width: 1760px;
   margin: auto;
   border-radius: 20px;
@@ -94,20 +94,17 @@
 .MenuIcon {
   width: 50px;
   height: 50px;
-  display: none;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: transparent;
-  z-index: 999;
-  position: relative;
+  border-color: transparent;
+  display: none;
 }
-.MenuIcon span {
-  background-color: rgb(89, 90, 90);
-  display: flex;
-  height: 3px;
+.MenuIcon img {
   width: 40px;
+  height: 40px;
 }
+
 .YellowButton:hover {
   background-color: rgb(36, 35, 35);
   color: white;
@@ -148,62 +145,5 @@
 
   .Menubar {
     display: none;
-  }
-
-  .Menubar {
-    position: absolute;
-  }
-
-  #MenuToggle:checked ~ .Menubar {
-    background-color: white;
-    height: 120vh;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    padding-top: 100px;
-    line-height: 40px;
-    transition: 400ms;
-    visibility: visible;
-  }
-
-  #MenuToggle:checked ~ .Menubar .ButtonContainer {
-    margin-left: 80px;
-    margin-top: 50px;
-    /* width: 100%; */
-  }
-
-  #MenuToggle:checked ~ .Menubar ul {
-    display: flex;
-    flex-direction: column;
-    opacity: 0.4;
-    margin: 0;
-    line-height: 20px;
-  }
-  #MenuToggle:checked ~ .Menubar ul li a {
-    font-size: 2.5rem;
-    line-height: 30px;
-  }
-
-  #MenuToggle:checked ~ .Menubar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #MenuToggle:checked ~ .MenuButton div span:nth-child(1) {
-    background-color: rgb(89, 90, 90);
-    transform: rotate(45deg);
-    transition: 500ms;
-  }
-  #MenuToggle:checked ~ .MenuButton div span:nth-child(2) {
-    visibility: hidden;
-  }
-  #MenuToggle:checked ~ .MenuButton div span:nth-child(3) {
-    background-color: rgb(89, 90, 90);
-    position: absolute;
-    top: 15px;
-    transform: rotate(-45deg);
-    transition: 500ms;
   }
 }

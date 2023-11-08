@@ -20,3 +20,9 @@
 .WorkContainer .WorkArea .Work {
   margin: 40px;
 }
+
+@media (max-width: 767px) {
+  .WorkContainer div h1 {
+    font-size: 2.5rem;
+  }
+}

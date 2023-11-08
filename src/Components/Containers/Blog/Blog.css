@@ -52,3 +52,14 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+@media (max-width: 767px) {
+  .Blog {
+    width: 95%;
+    margin: 10px;
+  }
+  .BlogContainer h1 {
+    font-size: 8vw;
+    margin: 40px 10px;
+  }
+}

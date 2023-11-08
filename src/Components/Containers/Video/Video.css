@@ -35,3 +35,10 @@
   width: 40px;
   height: 40px;
 }
+
+@media (max-width: 767px) {
+  .VideoContainer {
+    width: 90%;
+    padding: 0;
+  }
+}
