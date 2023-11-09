@@ -17,18 +17,24 @@
 .EnquiryContainer form input {
   height: 80px;
   width: 50vw;
-  margin: 20px;
+  margin: 20px 20px 0 20px;
   background: transparent;
   border-style: none;
   border-bottom-style: solid;
   outline: none;
   font-size: 3rem;
 }
+.EnquiryContainer form p {
+  margin: auto;
+  font-size: 0.8rem;
+  color: red;
+}
 
 .EnquiryContainer form .YellowButton {
   width: 150px;
   min-height: 70px;
   min-width: 70px;
+  margin-top: 20px;
 }
 
 @media (max-width: 1000px) {
