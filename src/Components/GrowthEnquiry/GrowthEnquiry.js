@@ -13,6 +13,7 @@ function GrowthEnquiry() {
 
   return (
     <>
+    
       <h1>Enquiry</h1>
       <table>
         <thead>

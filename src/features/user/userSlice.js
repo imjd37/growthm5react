@@ -25,7 +25,7 @@ export const createUser = createAsyncThunk(
   }
 );
 
-// get users data into database
+// get users data from database
 export const showUser = createAsyncThunk(
   "showUser",
   async (args, { rejectedWithValue }) => {
@@ -39,7 +39,7 @@ export const showUser = createAsyncThunk(
   }
 );
 
-// delete users data into database
+// delete users data
 
 export const deleteUser = createAsyncThunk(
   "deleteUser",
@@ -63,8 +63,25 @@ export const deleteUser = createAsyncThunk(
   }
 );
 
+// --------Currencies---------
+
+export const showCurrencies = createAsyncThunk(
+  "showCurrencies",
+  async (args, { rejectedWithValue }) => {
+    const response = await fetch("https://api.coinbase.com/v2/currencies");
+    try {
+      const result = await response.json();
+      return result.data;
+    } catch (error) {
+      return rejectedWithValue(error);
+    }
+  }
+);
+
+
 const initialState = {
   users: [],
+  currencies:[],
   loading: false,
   error: null,
 };
@@ -113,6 +130,17 @@ export const userSlice = createSlice({
     [deleteUser.rejected]: (state, action) => {
       state.loading = false;
       state.error = action.payload;
+    },
+    [showCurrencies.pending]: (state) => {
+      state.loading = true;
+    },
+    [showCurrencies.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.currencies = action.payload;
+    },
+    [showCurrencies.rejected]: (state, action) => {
+      state.loading = false;
+      state.currencies = action.payload;
     },
   },
 });

@@ -12,6 +12,8 @@ import Blog from "./Blog/Blog";
 import OurTeam from "./OurTeam/OurTeam";
 import Video from "./Video/Video";
 import Enquiry from "./Enquiry/Enquiry";
+import Currencies from "./Currencies/Currencies";
+
 
 function Containers() {
   return (
@@ -26,6 +28,7 @@ function Containers() {
       <ContactUs />
       <Price />
       <Blog />
+      <Currencies />
       <OurTeam />
       <Video />
       <Enquiry />
