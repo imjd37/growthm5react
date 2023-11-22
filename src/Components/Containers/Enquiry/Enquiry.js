@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import "./Enquiry.css";
 import { createUser } from "../../../features/user/userSlice";
-import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import MyModal from "../../MyModal/MyModal";
+import { useNavigate } from "react-router-dom";
 
 function Enquiry() {
   const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState(false);
+  const closeModal = () => setShowModal(false);
   const navigate = useNavigate();
+
+  const navigateEnquiry = () => {
+    navigate("/enquiry");
+  };
 
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -17,13 +24,15 @@ function Enquiry() {
   const schema = yup.object().shape({
     name: yup.string().min(3).required(),
     message: yup.string().min(10).required(),
-    phone: yup.string().matches(phoneRegExp, "Phone number is not valid"),
+    phone: yup.string().max(10).matches(phoneRegExp, "Phone number is not valid"),
     email: yup.string().email().required(),
   });
 
   const {
     register,
     handleSubmit,
+    reset,
+    formState,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -31,8 +40,19 @@ function Enquiry() {
 
   const onSubmit = (data) => {
     dispatch(createUser(data));
-    navigate("/enquiry");
   };
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      setShowModal(true);
+    }
+  }, [formState]);
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ name: "", message: "", phone: "", email: "" });
+    }
+  }, [formState, reset]);
 
   return (
     <>
@@ -69,10 +89,20 @@ function Enquiry() {
             {...register("email")}
           />
           <p>{errors.email?.message}</p>
-          <button type="submit" className="YellowButton">
-            Send
-          </button>
+          <div className="yellowButtonContainer">
+            <button type="submit" className="YellowButton">
+              Send
+            </button>
+            <button
+              type="button"
+              onClick={navigateEnquiry}
+              className="YellowButton"
+            >
+              View
+            </button>
+          </div>
         </form>
+        {showModal && <MyModal closeModal={closeModal} />}
       </div>
     </>
   );

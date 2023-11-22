@@ -5,7 +5,7 @@ import { showCurrencies } from "../../../features/user/userSlice";
 
 function Currencies() {
   const currencies = useSelector((state) => state.currencies);
-  const { loading } = useSelector((state) => state.currencies);
+  const  loading  = useSelector((state) => state.loading);
   const dispatch = useDispatch();
   const data = [];
 
@@ -41,8 +41,8 @@ function Currencies() {
       <div className="CurrenciesArea">
         <div id="Currencies">
           {data.map((user) => (
-            <ul>
-              <ul key={user.id}>
+            <ul key={user.id}>
+              <ul >
                 <li> {user.id}</li>
                 <li> {user.name}</li>
                 <li> {user.min_size}</li>

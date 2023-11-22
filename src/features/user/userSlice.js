@@ -13,11 +13,6 @@ export const createUser = createAsyncThunk(
     });
     try {
       const result = await response.json();
-      if (result.command === "INSERT") {
-        alert("Registration successful");
-      } else {
-        alert(result);
-      }
       return result;
     } catch (error) {
       return rejectWithValue(error.response);
@@ -78,12 +73,13 @@ export const showCurrencies = createAsyncThunk(
   }
 );
 
-
 const initialState = {
   users: [],
-  currencies:[],
+  currencies: [],
+  isSubmit: [],
   loading: false,
   error: null,
+  navBarChange: true,
 };
 
 export const userSlice = createSlice({
@@ -100,21 +96,24 @@ export const userSlice = createSlice({
     },
     [createUser.fulfilled]: (state, action) => {
       state.loading = false;
-      state.users.push(action.payload);
+      state.isSubmit = action.payload;
     },
     [createUser.rejected]: (state, action) => {
       state.loading = false;
-      state.users = action.payload;
+      state.isSubmit = action.payload;
     },
     [showUser.pending]: (state) => {
       state.loading = true;
+      state.navBarChange = false;
     },
     [showUser.fulfilled]: (state, action) => {
       state.loading = false;
+      state.navBarChange = false;
       state.users = action.payload;
     },
     [showUser.rejected]: (state, action) => {
       state.loading = false;
+      state.navBarChange = false;
       state.error = action.payload;
     },
     [deleteUser.pending]: (state) => {
@@ -133,14 +132,17 @@ export const userSlice = createSlice({
     },
     [showCurrencies.pending]: (state) => {
       state.loading = true;
+      state.navBarChange = true;
     },
     [showCurrencies.fulfilled]: (state, action) => {
       state.loading = false;
       state.currencies = action.payload;
+      state.navBarChange = true;
     },
     [showCurrencies.rejected]: (state, action) => {
       state.loading = false;
       state.currencies = action.payload;
+      state.navBarChange = true;
     },
   },
 });

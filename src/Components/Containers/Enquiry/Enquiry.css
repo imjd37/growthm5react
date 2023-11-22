@@ -36,6 +36,10 @@
   min-width: 70px;
   margin-top: 20px;
 }
+.yellowButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media (max-width: 1000px) {
   .EnquiryContainer {
