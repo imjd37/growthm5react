@@ -1,0 +1,27 @@
+.EnquiryTable {
+  margin-top: 130px;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  padding: 40px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+table tbody tr button {
+  background-color: transparent;
+  border: none;
+}
+table tbody tr td {
+  background-color: rgba(0, 0, 0, 0.11);
+  padding: 10px;
+}
+
+table tbody tr img {
+  height: 40px;
+  width: 40px;
+}
